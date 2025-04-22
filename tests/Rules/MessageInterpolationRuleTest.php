@@ -36,6 +36,10 @@ final class MessageInterpolationRuleTest extends RuleTestCase
                 'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
                 22,
             ],
+            [
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
+                24,
+            ],
         ]);
     }
 
