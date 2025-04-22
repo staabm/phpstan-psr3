@@ -69,6 +69,10 @@ final class MessageInterpolationRuleTest extends RuleTestCase
 
     public function testRedaxo(): void
     {
+        if (PHP_VERSION_ID > 70400) {
+            $this->markTestSkipped('Test does not support PHP 8.0.');
+        }
+        
         require_once __DIR__ . '/../../vendor/redaxo/source/redaxo/src/core/lib/base/factory_trait.php';
         require_once __DIR__ . '/../../vendor/redaxo/source/redaxo/src/core/lib/util/logger.php';
 
