@@ -1,0 +1,15 @@
+includes:
+    - config/extension.neon
+
+parameters:
+    editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
+
+    level: max
+
+    paths:
+        - src/
+
+    unused_public:
+        methods: true
+        properties: true
+        constants: true
