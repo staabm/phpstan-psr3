@@ -70,10 +70,10 @@ final class MessageInterpolationRule implements Rule
         }
 
         if ($args[0]->value instanceof Node\Expr\BinaryOp\Concat) {
-            return [RuleErrorBuilder::message('Using interpolated strings in log messages is potentially a security risk.')->identifier('psr3.concat')->build()];
+            return [RuleErrorBuilder::message('Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.')->identifier('psr3.concat')->build()];
         }
         if ($args[0]->value instanceof Node\Scalar\InterpolatedString) {
-            return [RuleErrorBuilder::message('Using interpolated strings in log messages is potentially a security risk.')->identifier('psr3.interpolated')->build()];
+            return [RuleErrorBuilder::message('Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.')->identifier('psr3.interpolated')->build()];
         }
 
         return [];
