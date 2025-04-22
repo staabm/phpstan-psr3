@@ -21,19 +21,19 @@ final class MessageInterpolationRuleTest extends RuleTestCase
     {
         $this->analyse([__DIR__ . '/data/symfony-example.php'], [
             [
-                'Using interpolated strings in log messages is potentially a security risk.',
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
                 9,
             ],
             [
-                'Using interpolated strings in log messages is potentially a security risk.',
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
                 10,
             ],
             [
-                'Using interpolated strings in log messages is potentially a security risk.',
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
                 14,
             ],
             [
-                'Using interpolated strings in log messages is potentially a security risk.',
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
                 21,
             ],
         ]);
@@ -43,15 +43,15 @@ final class MessageInterpolationRuleTest extends RuleTestCase
     {
         $this->analyse([__DIR__ . '/data/monolog-example.php'], [
             [
-                'Using interpolated strings in log messages is potentially a security risk.',
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
                 16,
             ],
             [
-                'Using interpolated strings in log messages is potentially a security risk.',
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
                 17,
             ],
             [
-                'Using interpolated strings in log messages is potentially a security risk.',
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
                 20,
             ],
         ]);
@@ -61,7 +61,7 @@ final class MessageInterpolationRuleTest extends RuleTestCase
     {
         $this->analyse([__DIR__ . '/data/laravel-facade-example.php'], [
             [
-                'Using interpolated strings in log messages is potentially a security risk.',
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
                 8,
             ],
         ]);
@@ -78,7 +78,7 @@ final class MessageInterpolationRuleTest extends RuleTestCase
 
         $this->analyse([__DIR__ . '/data/redaxo-example.php'], [
             [
-                'Using interpolated strings in log messages is potentially a security risk.',
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
                 8,
             ],
         ]);
