@@ -17,6 +17,7 @@
     "phpstan/phpstan-phpunit": "^2.0.6",
     "phpstan/phpstan-strict-rules": "^2.0.4",
     "phpunit/phpunit": "^10.5.45",
+    "redaxo/source": "^5.18",
     "symplify/easy-coding-standard": "^12.5.11",
     "tomasvotruba/unused-public": "^2.0.1"
   },
