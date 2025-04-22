@@ -62,7 +62,11 @@ final class MessageInterpolationRuleTest extends RuleTestCase
         $this->analyse([__DIR__ . '/data/laravel-facade-example.php'], [
             [
                 'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
-                8,
+                9,
+            ],
+            [
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
+                17,
             ],
         ]);
     }
