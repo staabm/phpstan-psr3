@@ -81,7 +81,7 @@ final class MessageInterpolationRule implements Rule
 
     private function isPsr3LikeCall(MethodReflection $methodReflection): bool
     {
-        if ($methodReflection->getDeclaringClass()->is(\Psr\Log\LoggerInterface::class)) {
+        if ($methodReflection->getDeclaringClass()->implementsInterface(\Psr\Log\LoggerInterface::class)) {
             return in_array(strtolower($methodReflection->getName()), $this->psr3LogMethods, true);
         }
 
