@@ -1,6 +1,6 @@
 # PHPStan PSR3 logger rules
 
-PHPStan rules for PSR3 compatible logger packages to report misuse and possible security risks.
+PHPStan rules for [PSR3](https://www.php-fig.org/psr/psr-3/) compatible logger packages to report misuse and possible security risks.
 
 Supports
 - psr/log interface
