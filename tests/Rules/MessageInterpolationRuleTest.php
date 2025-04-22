@@ -65,6 +65,9 @@ final class MessageInterpolationRuleTest extends RuleTestCase
 
     public function testRedaxo(): void
     {
+        require_once __DIR__ . '/../../vendor/redaxo/source/redaxo/src/core/lib/base/factory_trait.php';
+        require_once __DIR__ . '/../../vendor/redaxo/source/redaxo/src/core/lib/util/logger.php';
+
         $this->analyse([__DIR__ . '/data/redaxo-example.php'], [
             [
                 'Using interpolated strings in log messages is potentially a security risk.',
