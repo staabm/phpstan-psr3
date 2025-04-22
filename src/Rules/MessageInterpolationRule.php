@@ -89,7 +89,7 @@ final class MessageInterpolationRule implements Rule
             return in_array(strtolower($methodReflection->getName()), $this->psr3LogMethods, true);
         }
 
-        if ($methodReflection->getDeclaringClass()->is(\rex_logger::class)) {
+        if ($methodReflection->getDeclaringClass()->is(\rex_logger::class)) { // @phpstan-ignore class.notFound
             if (strtolower($methodReflection->getName()) === 'logerror') {
                 return true;
             }

@@ -12,6 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.draft == false
 
+    matrix:
+      php-version:
+        - "7.4"
+        - "8.0"
+        - "8.1"
+        - "8.2"
+        - "8.3"
+        - "8.4"
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,7 +30,7 @@ jobs:
       -   name: Setup PHP
           uses: shivammathur/setup-php@v2
           with:
-            php-version: 8.1
+            php-version: "${{ matrix.php-version }}"
             coverage: none # disable xdebug, pcov
 
       -   name: Composer install
