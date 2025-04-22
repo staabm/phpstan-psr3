@@ -18,7 +18,7 @@ use PHPStan\Rules\RuleErrorBuilder;
 final class MessageInterpolationRule implements Rule
 {
     /**
-     * @var list<string>
+     * @var list<lowercase-string>
      */
     private array $psr3LogMethods = [
         'log',
@@ -82,18 +82,18 @@ final class MessageInterpolationRule implements Rule
     private function isPsr3LikeCall(MethodReflection $methodReflection): bool
     {
         if ($methodReflection->getDeclaringClass()->is(\Psr\Log\LoggerInterface::class)) {
-            return in_array($methodReflection->getName(), $this->psr3LogMethods, true);
+            return in_array(strtolower($methodReflection->getName()), $this->psr3LogMethods, true);
         }
 
         if ($methodReflection->getDeclaringClass()->is(\Illuminate\Support\Facades\Log::class)) {
-            return in_array($methodReflection->getName(), $this->psr3LogMethods, true);
+            return in_array(strtolower($methodReflection->getName()), $this->psr3LogMethods, true);
         }
 
         if ($methodReflection->getDeclaringClass()->is(\rex_logger::class)) {
             if (strtolower($methodReflection->getName()) === 'logerror') {
                 return true;
             }
-            return in_array($methodReflection->getName(), $this->psr3LogMethods, true);
+            return in_array(strtolower($methodReflection->getName()), $this->psr3LogMethods, true);
         }
 
         return false;

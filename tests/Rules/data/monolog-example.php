@@ -16,5 +16,7 @@ function basicExample() {
     $log->warning('Foo'.$s);
     $log->error('Bar'.$s);
     $log->error('Bar');
+
+    $log->ERROR('Bar'.$s);
 }
 
