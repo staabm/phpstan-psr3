@@ -62,4 +62,14 @@ final class MessageInterpolationRuleTest extends RuleTestCase
             ],
         ]);
     }
+
+    public function testRedaxo(): void
+    {
+        $this->analyse([__DIR__ . '/data/redaxo-example.php'], [
+            [
+                'Using interpolated strings in log messages is potentially a security risk.',
+                8,
+            ],
+        ]);
+    }
 }

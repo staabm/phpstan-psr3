@@ -6,6 +6,7 @@ Supports
 - psr/log interface
 - any PSR3 compatible logger package, e.g. monolog/monolog
 - illuminate/log facade (laravel)
+- REDAXO rex_logger
 
 ## Related articles
 
