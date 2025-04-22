@@ -20,6 +20,8 @@ function wrong(LoggerInterface $logger, string $s, $b)
     ]);
 
     $logger->info("Failed user login for {$_POST['username']}.");
+
+    $logger->error(\sprintf('Error with userId "%s"', $s));
 }
 
 function good(LoggerInterface $logger, bool $nativeBool)
