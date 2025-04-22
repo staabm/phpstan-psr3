@@ -6,7 +6,7 @@
   "require": {
     "php": "^8.1",
     "psr/log": "^2.0 || ^3.0",
-    "phpstan/phpstan": "^2.0"
+    "phpstan/phpstan": "^2.1"
   },
   "require-dev": {
     "illuminate/support": "^12.9",
