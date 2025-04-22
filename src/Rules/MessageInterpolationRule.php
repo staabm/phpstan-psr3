@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace staabm\PHPStanPsr3\Rules;
 
 use PhpParser\Node;
@@ -44,13 +46,13 @@ final class MessageInterpolationRule implements Rule
 
         $methodReflection = null;
         if ($node instanceof Node\Expr\MethodCall) {
-            if (!$node->name instanceof Identifier) {
+            if (! $node->name instanceof Identifier) {
                 return [];
             }
 
             $methodReflection = $scope->getMethodReflection($scope->getType($node->var), $node->name->toString());
         } elseif ($node instanceof Node\Expr\StaticCall) {
-            if (!$node->name instanceof Identifier) {
+            if (! $node->name instanceof Identifier) {
                 return [];
             }
 
@@ -62,7 +64,7 @@ final class MessageInterpolationRule implements Rule
 
         if (
             $methodReflection === null
-            || !$this->isPsr3LikeCall($methodReflection)
+            || ! $this->isPsr3LikeCall($methodReflection)
         ) {
             return [];
         }
@@ -77,7 +79,7 @@ final class MessageInterpolationRule implements Rule
         return [];
     }
 
-    private function isPsr3LikeCall(MethodReflection $methodReflection):bool
+    private function isPsr3LikeCall(MethodReflection $methodReflection): bool
     {
         if ($methodReflection->getDeclaringClass()->is(\Psr\Log\LoggerInterface::class)) {
             return in_array($methodReflection->getName(), $this->logMethods, true);

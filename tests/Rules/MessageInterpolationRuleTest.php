@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace staabm\PHPStanPsr3\Rules;
 
 use PHPStan\Rules\Rule;
@@ -8,14 +10,15 @@ use PHPStan\Testing\RuleTestCase;
 /**
  * @extends RuleTestCase<MessageInterpolationRule>
  */
-final class MessageInterpolationRuleTest extends RuleTestCase {
-
+final class MessageInterpolationRuleTest extends RuleTestCase
+{
     protected function getRule(): Rule
     {
         return new MessageInterpolationRule();
     }
 
-    public function testSymfonyExample(): void {
+    public function testSymfonyExample(): void
+    {
         $this->analyse([__DIR__ . '/data/symfony-example.php'], [
             [
                 'Using interpolated strings in log messages is potentially a security risk.',
@@ -32,7 +35,8 @@ final class MessageInterpolationRuleTest extends RuleTestCase {
         ]);
     }
 
-    public function testMonologExample(): void {
+    public function testMonologExample(): void
+    {
         $this->analyse([__DIR__ . '/data/monolog-example.php'], [
             [
                 'Using interpolated strings in log messages is potentially a security risk.',
@@ -45,7 +49,8 @@ final class MessageInterpolationRuleTest extends RuleTestCase {
         ]);
     }
 
-    public function testLaravelExample(): void {
+    public function testLaravelExample(): void
+    {
         $this->analyse([__DIR__ . '/data/laravel-facade-example.php'], [
             [
                 'Using interpolated strings in log messages is potentially a security risk.',
