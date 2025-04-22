@@ -22,19 +22,19 @@ final class MessageInterpolationRuleTest extends RuleTestCase
         $this->analyse([__DIR__ . '/data/symfony-example.php'], [
             [
                 'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
-                9,
-            ],
-            [
-                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
                 10,
             ],
             [
                 'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
-                14,
+                11,
             ],
             [
                 'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
-                21,
+                15,
+            ],
+            [
+                'Using interpolated strings in log messages is potentially a security risk. Use PSR-3 placeholders instead.',
+                22,
             ],
         ]);
     }

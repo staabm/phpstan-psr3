@@ -4,7 +4,8 @@ namespace SymfonyExample;
 
 use Psr\Log\LoggerInterface;
 
-function wrong(LoggerInterface $logger, string $s, bool $b)
+/** @param bool $b */
+function wrong(LoggerInterface $logger, string $s, $b)
 {
     $logger->info('I just got the logger '. $s);
     $logger->error("An error occurred $b");
@@ -21,8 +22,9 @@ function wrong(LoggerInterface $logger, string $s, bool $b)
     $logger->info("Failed user login for {$_POST['username']}.");
 }
 
-function good(LoggerInterface $logger)
+function good(LoggerInterface $logger, bool $nativeBool)
 {
+    $logger->error("An error occurred $nativeBool");
     $logger->info('I just got the logger');
     $logger->error('An error occurred');
 
@@ -44,6 +46,6 @@ function good(LoggerInterface $logger)
     // ...
 }
 
-function getUserId(): int {
-    return 42;
+function getUserId(): string {
+    return "some-id";
 }
