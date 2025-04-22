@@ -29,7 +29,7 @@ If you don't want to use `phpstan/extension-installer`, include extension.neon i
 
 ```
 includes:
-    - vendor/staabm/phpstan-psr3/extension.neon
+    - vendor/staabm/phpstan-psr3/config/extension.neon
 ```
 
 </details>
