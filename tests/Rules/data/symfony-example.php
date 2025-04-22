@@ -17,6 +17,8 @@ function wrong(LoggerInterface $logger, string $s, bool $b)
         // include extra "context" info in your logs
         'cause' => 'in_hurry',
     ]);
+
+    $logger->info("Failed user login for {$_POST['username']}.");
 }
 
 function good(LoggerInterface $logger)
@@ -33,6 +35,10 @@ function good(LoggerInterface $logger)
     $logger->critical('I left the oven on!', [
         // include extra "context" info in your logs
         'cause' => 'in_hurry',
+    ]);
+
+    $logger->info("Failed user login for {username}.", [
+        'username' => $_POST['username'],
     ]);
 
     // ...

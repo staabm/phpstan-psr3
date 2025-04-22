@@ -32,6 +32,10 @@ final class MessageInterpolationRuleTest extends RuleTestCase
                 'Using interpolated strings in log messages is potentially a security risk.',
                 14,
             ],
+            [
+                'Using interpolated strings in log messages is potentially a security risk.',
+                21,
+            ],
         ]);
     }
 
