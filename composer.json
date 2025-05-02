@@ -9,7 +9,7 @@
     "phpstan/phpstan": "^2.0"
   },
   "require-dev": {
-    "illuminate/support": "^8 || ^9 || ^10 || ^11 || ^12",
+    "illuminate/support": "^12.12.0",
     "illuminate/log": "^8 || ^9 || ^10 || ^11 || ^12",
     "monolog/monolog": "^2 || ^3.9",
     "php-parallel-lint/php-parallel-lint": "^1.4",
