@@ -16,7 +16,7 @@
     "phpstan/extension-installer": "^1.4.3",
     "phpstan/phpstan-deprecation-rules": "^2.0.3",
     "phpstan/phpstan-phpunit": "^2.0.7",
-    "phpstan/phpstan-strict-rules": "^2.0.4",
+    "phpstan/phpstan-strict-rules": "^2.0.7",
     "phpunit/phpunit": "^9 || ^10.5.45",
     "redaxo/source": "^5",
     "symplify/easy-coding-standard": "^12.6.0",
