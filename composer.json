@@ -19,7 +19,7 @@
     "phpstan/phpstan-strict-rules": "^2.0.7",
     "phpunit/phpunit": "^9 || ^10.5.45",
     "redaxo/source": "^5",
-    "symplify/easy-coding-standard": "^12.6.0",
+    "symplify/easy-coding-standard": "^12.6.2",
     "tomasvotruba/unused-public": "^2.0.1"
   },
   "autoload": {
