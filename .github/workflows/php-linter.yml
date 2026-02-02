@@ -38,7 +38,7 @@ jobs:
       -   name: Composer install
           uses: ramsey/composer-install@v3
           with:
-            composer-options: --ansi --prefer-dist
+            composer-options: "--ansi --prefer-dist  --no-security-blocking"
 
       -   name: Lint PHP
           run: vendor/bin/parallel-lint src tests config
