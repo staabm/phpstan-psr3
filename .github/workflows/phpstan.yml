@@ -38,6 +38,6 @@ jobs:
 
       - uses: "ramsey/composer-install@v3"
         with:
-          composer-options: "--prefer-dist --no-progress"
+          composer-options: "--prefer-dist --no-progress --no-security-blocking"
 
       - run: composer phpstan
