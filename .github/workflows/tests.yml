@@ -43,7 +43,7 @@ jobs:
       with:
         dependency-versions: "${{ matrix.dependencies }}"
         # ignore php8.2 requirement error https://github.com/sebastianbergmann/phpunit/issues/5033
-        composer-options: "--ignore-platform-req=php+"
+        composer-options: "--ignore-platform-req=php+ --no-security-blocking"
 
     - name: Setup Problem Matchers for PHPUnit
       run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
