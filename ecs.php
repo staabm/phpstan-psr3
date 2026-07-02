@@ -21,7 +21,6 @@ return function (ECSConfig $ecsConfig): void {
         // run and fix, one by one
         SetList::SPACES,
         SetList::ARRAY,
-        SetList::STRICT,
         SetList::DOCBLOCK,
         SetList::NAMESPACES,
         SetList::COMMENTS,
