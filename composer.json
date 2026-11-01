@@ -17,7 +17,7 @@
     "phpstan/phpstan-deprecation-rules": "^2.0.5",
     "phpstan/phpstan-phpunit": "^2.0.19",
     "phpstan/phpstan-strict-rules": "^2.0.12",
-    "phpunit/phpunit": "^9 || ^10.5.45",
+    "phpunit/phpunit": "^13.4.5",
     "redaxo/source": "^5",
     "symplify/easy-coding-standard": "^13.2.3",
     "tomasvotruba/unused-public": "^2.2.0"
